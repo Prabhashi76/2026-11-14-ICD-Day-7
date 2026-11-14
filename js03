@@ -1,0 +1,35 @@
+let y=Math.floor(Math.random() *10) +1;
+console.log(y);
+
+
+
+
+function btnsubmitGuessOnAction(){
+    let userGuess = document.getElementById("txtGusse").value
+
+    if(userGuess==y){
+       
+        Swal fire({
+        title: "Congratulations!",
+        width:600,
+        padding:"3em",
+        color:"#716add",
+        
+        background: "#fff 
+        url('https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3cTVudG8xenVwZTJ3MW53dXd4MHF4ZjFueGhhcGZhaHh1cXFqajV2YiZlcD12MV9naWZzX3NlYXJjaCZjdD1n/l3q2Z6S6n38zjPswo/giphy.gif')",
+        backdrop: `
+        rgba(0,0,123,0.4)
+        url("/images/nyan-cat.gif")
+        left top
+        no-repeat
+
+    });
+
+}else if(userGuess > y){
+    guess++;
+    alert("Your guess is too high!Tyr again.");
+}else{
+    guess++;
+    alert("Your guess is too law!Try again.");
+}
+}
